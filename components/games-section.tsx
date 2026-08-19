@@ -8,6 +8,7 @@ const GAME = {
   status: 'In development',
   image: '/games/desert-grinder.png',
   icon: '/games/desert-grinder-icon.png',
+  steamUrl: 'https://store.steampowered.com/app/4959280/Desert_Grinder/?beta=1',
   description:
     'Survive a merciless wasteland as a heavily armed feline mercenary. Run, shoot, and grind through a sun-scorched desert where the only law is survival.',
 }
@@ -64,10 +65,12 @@ export function GamesSection() {
               {GAME.description}
             </p>
             <a
-              href="#games"
+              href={GAME.steamUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-foreground"
             >
-              View game
+              View on Steam
               <ArrowUpRight className="size-4" />
             </a>
           </div>
